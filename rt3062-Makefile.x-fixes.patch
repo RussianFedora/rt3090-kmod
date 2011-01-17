@@ -1,0 +1,38 @@
+diff -uNdr DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.4 DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.4
+--- DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.4	2010-12-17 14:44:47.000000000 +0300
++++ DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.4	2011-01-16 00:17:06.000000000 +0300
+@@ -271,13 +271,8 @@
+ endif
+ 
+ install:
+-	rm -rf $(DAT_PATH)
+-	$(shell [ ! -f /etc/Wireless ] && mkdir /etc/Wireless)
+-	mkdir $(DAT_PATH)
+-	cp $(RT28xx_DIR)/$(DAT_FILE_NAME) $(DAT_PATH)/.
+-	install -d $(LINUX_SRC_MODULE)
+-	install -m 644 -c $(addsuffix .o,$(MOD_NAME)) $(LINUX_SRC_MODULE)
+-	/sbin/depmod -a ${shell uname -r}
++	mkdir -p $(INST_DIR)
++	install -m 644 -c $(addsuffix .ko,$(MOD_NAME))  $(INST_DIR)
+ 
+ uninstall:
+ #	rm -rf $(DAT_PATH)
+diff -uNdr DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.6 DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.6
+--- DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.6	2010-12-17 14:44:47.000000000 +0300
++++ DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.6	2011-01-16 00:17:52.000000000 +0300
+@@ -255,13 +255,8 @@
+ endif
+ 
+ install:
+-	rm -rf $(DAT_PATH)
+-	$(shell [ ! -f /etc/Wireless ] && mkdir /etc/Wireless)
+-	mkdir $(DAT_PATH)
+-	cp $(RT28xx_DIR)/$(DAT_FILE_NAME) $(DAT_PATH)/.
+-	install -d $(LINUX_SRC_MODULE)
+-	install -m 644 -c $(addsuffix .ko,$(MOD_NAME)) $(LINUX_SRC_MODULE)
+-	/sbin/depmod -a ${shell uname -r}
++	mkdir -p $(INST_DIR)
++	install -m 644 -c $(addsuffix .ko,$(MOD_NAME))  $(INST_DIR)
+ 
+ uninstall:
+ #	rm -rf $(DAT_PATH)
