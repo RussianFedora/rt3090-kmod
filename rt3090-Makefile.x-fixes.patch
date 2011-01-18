@@ -1,7 +1,7 @@
-diff -uNdr DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.4 DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.4
---- DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.4	2010-12-17 14:44:47.000000000 +0300
-+++ DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.4	2011-01-16 00:17:06.000000000 +0300
-@@ -271,13 +271,8 @@
+diff -uNdr 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/Makefile.4 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/Makefile.4
+--- 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/Makefile.4	2010-12-08 21:49:06.000000000 +0300
++++ 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/Makefile.4	2011-01-18 20:00:43.998170858 +0300
+@@ -199,13 +199,8 @@
  endif
  
  install:
@@ -17,10 +17,10 @@ diff -uNdr DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefil
  
  uninstall:
  #	rm -rf $(DAT_PATH)
-diff -uNdr DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.6 DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.6
---- DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217.orig/os/linux/Makefile.6	2010-12-17 14:44:47.000000000 +0300
-+++ DPO_RT3562_3592_3062_LinuxSTA_V2.4.1.1_20101217/os/linux/Makefile.6	2011-01-16 00:17:52.000000000 +0300
-@@ -255,13 +255,8 @@
+diff -uNdr 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/Makefile.6 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/Makefile.6
+--- 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/Makefile.6	2010-12-09 18:29:28.000000000 +0300
++++ 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/Makefile.6	2011-01-18 20:01:16.294170787 +0300
+@@ -198,13 +198,8 @@
  endif
  
  install:

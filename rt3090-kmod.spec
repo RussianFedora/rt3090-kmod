@@ -9,7 +9,7 @@
 
 Name:		rt3090-kmod
 Version:	2.4.0.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Kernel module for wireless devices with Ralink's RT3090 PCIe (RT3090) chipsets
 
 Group:		System Environment/Kernel
@@ -17,10 +17,10 @@ License:	GPLv2+
 URL:		http://www.ralinktech.com/support.php?s=2
 # No direct links anymore. The sources are downloaded from the above page.
 Source0:	2010_1217_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.zip
-Source11:	rt3062-kmodtool-excludekernel-filterfile
-Patch0:		rt3062-CHIPSET_DAT-fix.patch
+Source11:	rt3090-kmodtool-excludekernel-filterfile
+Patch0:		rt3090-fix-2860-conflicts.patch
 Patch1:		no-tftpboot.patch
-Patch2:		rt3062-Makefile.x-fixes.patch
+Patch2:		rt3090-Makefile.x-fixes.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:	%{_bindir}/kmodtool
@@ -76,8 +76,11 @@ chmod 0755 $RPM_BUILD_ROOT/%{kmodinstdir_prefix}/*/%{kmodinstdir_postfix}/*
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Tue Jan 18 2011 Alexei Panov <elemc [AT] atisserv [DOT] ru> - 2.4.0.4-2
+- Fix patches
+
 * Mon Jan 17 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 2.4.0.4-1
-= changed for RT3090 sources from rt2870-kmod package
+- changed for RT3090 sources from rt2870-kmod package
 
 * Sun Jan 16 2011 Alexei Panov <elemc [AT] atisserv [DOT] ru> - 2.4.1.1-1
 - changed for RT3062 sources from rt2870-kmod package
