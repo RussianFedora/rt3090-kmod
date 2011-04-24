@@ -9,7 +9,7 @@
 
 Name:		rt3090-kmod
 Version:	2.4.0.4
-Release:	3%{?dist}
+Release:	3%{?dist}.1.R
 Summary:	Kernel module for wireless devices with Ralink's RT3090 PCIe (RT3090) chipsets
 
 Group:		System Environment/Kernel
@@ -76,6 +76,9 @@ chmod 0755 $RPM_BUILD_ROOT/%{kmodinstdir_prefix}/*/%{kmodinstdir_postfix}/*
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Sun Apr 24 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 2.4.0.4-3.1.R
+- rebuilt against new kernel
+
 * Fri Feb 11 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 2.4.0.4-3
 - update for new kernel
 
