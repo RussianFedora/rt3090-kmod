@@ -9,7 +9,7 @@
 
 Name:		rt3090-kmod
 Version:	2.4.0.4
-Release:	3%{?dist}.1.R
+Release:	3%{?dist}.2.R
 Summary:	Kernel module for wireless devices with Ralink's RT3090 PCIe (RT3090) chipsets
 
 Group:		System Environment/Kernel
@@ -21,6 +21,7 @@ Source11:	rt3090-kmodtool-excludekernel-filterfile
 Patch0:		rt3090-fix-2860-conflicts.patch
 Patch1:		no-tftpboot.patch
 Patch2:		rt3090-Makefile.x-fixes.patch
+Patch3:		rt3090-disable-cfg80211.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:	%{_bindir}/kmodtool
@@ -47,6 +48,7 @@ pushd %{src_folder_name}
 %patch0 -p1 -b .CHIPSET_DAT
 %patch1 -p1 -b .no24
 %patch2 -p1 -b .rpmbuild
+%patch3 -p1 -b .disable-cfg80211
 popd
 
 # Fix permissions

@@ -1,0 +1,12 @@
+diff -uNdr 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/config.mk 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/config.mk
+--- 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO.orig/os/linux/config.mk	2010-12-08 21:49:06.000000000 +0300
++++ 20101216_RT3090_LinuxSTA_V2.4.0.4_WiFiBTCombo_DPO/os/linux/config.mk	2011-07-04 19:17:02.770919103 +0400
+@@ -108,7 +108,7 @@
+ HAS_GREENAP_SUPPORT=n
+ 
+ #Support MAC80211 LINUX-only function
+-HAS_CFG80211_SUPPORT=y
++HAS_CFG80211_SUPPORT=n
+ 
+ #Support RFKILL hardware block/unblock LINUX-only function
+ HAS_RFKILL_HW_SUPPORT=y
